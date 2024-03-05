@@ -1,0 +1,12 @@
+version: '3.2'
+services:
+  cli:
+    build: ./.docker/php
+    volumes:
+      - ./:/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    user: ${UID:-1000}
+    environment:
+      PHP_IDE_CONFIG: "serverName=cli"
+
