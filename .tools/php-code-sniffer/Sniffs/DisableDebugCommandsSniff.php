@@ -15,9 +15,8 @@ class DisableDebugCommandsSniff implements Sniff
     public function process(File $phpcsFile, $stackPtr)
     {
         $tokens = $phpcsFile->getTokens();
-            $error = 'Hash comments are prohibited; found %s';
-            $data  = array(trim($tokens[$stackPtr]['content']));
-            $phpcsFile->addError($error, $stackPtr, 'Found', $data);
+        $error = 'Die or Exit usage is prohibited; found %s';
+        $data  = array(trim($tokens[$stackPtr]['content']));
+        $phpcsFile->addError($error, $stackPtr, 'Found', $data);
     }
-
 }
