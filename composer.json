@@ -10,6 +10,7 @@
     "php": ">=8.2",
     "ext-ctype": "*",
     "ext-iconv": "*",
+    "psr/container": "^2.0",
     "symfony/console": "6.3.*",
     "symfony/dotenv": "6.3.*",
     "symfony/flex": "^2",
